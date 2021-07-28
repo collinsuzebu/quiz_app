@@ -1,0 +1,59 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.stats {
+  margin: 20px 0;
+  padding: 10px 10px;
+  border-radius: 15px;
+  width: 100%;
+  display: block;
+  color: white;
+  text-align: center;
+  font-weight: 800;
+}
+
+.quiz {
+  padding: 50px;
+  width: 45%;
+  background-color: rgb(61, 60, 63);
+  box-shadow: -4px 45px 39px -17px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: -4px 45px 39px -17px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: -4px 45px 39px -17px rgba(0, 0, 0, 0.51);
+}
+
+.main {
+  background-color: rgb(237, 237, 237);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.options {
+  padding: 10px 0;
+}
+
+#result {
+  color: rgb(255, 255, 255);
+  background-color: rgb(61, 60, 63);
+  border-radius: 5px;
+  padding: 50px;
+  width: 45%;
+  box-shadow: -4px 45px 39px -17px rgba(0, 0, 0, 0.51);
+}

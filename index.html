@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Quiz App</title>
+  </head>
+  <body onload="hideQuiz()">
+    <div class="main">
+      <!-- Start Page -->
+      <div id="startPage">
+        <form class="form" onsubmit="return false;">
+          <button
+            type="submit"
+            class="btn btn-primary mb-2"
+            id="submit"
+            onclick="startQuiz(this);"
+          >
+            Start Quiz
+          </button>
+        </form>
+      </div>
+
+      <!-- Quiz Form -->
+      <div id="stats"></div>
+
+      <div id="quiz" class="quiz">
+        <h2>LRN Quiz App</h2>
+
+        <hr />
+        <legend id="question">Question</legend>
+
+        <form onsubmit="return false;">
+          <!-- Single -->
+          <div id="single-choice">
+            <div id="single-choice-options" class="options"></div>
+          </div>
+
+          <!-- Multiple Choice -->
+          <div id="multiple-choice">
+            <div id="multi-choice-options" class="options"></div>
+          </div>
+
+          <!-- Input Choice -->
+          <div id="input-choice">
+            <div id="input-choice-options" class="options">
+              <!-- Options goes here -->
+            </div>
+
+            <div class="mb-3 row">
+              <label for="inputChoice" class="col-sm-2 col-form-label"
+                >Answer:
+              </label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputChoice"
+                  name="inputChoice"
+                  onkeyup="activateBtn(this)"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="btn-wrapper">
+            <button
+              type="submit"
+              disabled="disabled"
+              class="btn btn-primary"
+              id="submit-button"
+              onclick="submitAnswer();"
+            >
+              Submit
+            </button>
+            <button
+              type="submit"
+              disabled="disabled"
+              class="btn btn-light"
+              id="next-button"
+              onclick="nextQuestion();"
+            >
+              Next
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="result" style="display: none"><b>Result:</b><br /></div>
+    </div>
+
+    <!-- popper and bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/questions.js"></script>
+  </body>
+</html>
